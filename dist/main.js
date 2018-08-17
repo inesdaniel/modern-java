@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "dist";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -93,7 +93,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var moment = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\");\n\nconsole.log(\"in .js file\");\n\nconsole.log(moment().subtract(10, 'days').calendar());\n\n\n// load math.js\nconst math = __webpack_require__(/*! mathjs */ \"./node_modules/mathjs/index.js\");\n\n// use math.js\nconsole.log(math.sqrt(-4)); // 2i\n\n//# sourceURL=webpack:///./index.js?");
+"use strict";
+eval("\n\nvar moment = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\");\n\nconsole.log(\"in .js file\");\n\nconsole.log(moment().subtract(10, 'days').calendar());\n\n// load math.js\nvar math = __webpack_require__(/*! mathjs */ \"./node_modules/mathjs/index.js\");\n\n// use math.js\nconsole.log(math.sqrt(-4)); // 2i\n\n// Basic literal string creation\nconsole.log('This is a pretty little template string.');\n\n// Multiline strings\nconsole.log('In ES5 this is\\n not legal.');\n\n// Proxying a normal object\nvar target = {};\nvar handler = {\n  get: function get(receiver, name) {\n    return 'Hello, ' + name + '!';\n  }\n};\n\nvar p = new Proxy(target, handler);\np.world === \"Hello, world!\";\n\nconsole.log(p.world);\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
