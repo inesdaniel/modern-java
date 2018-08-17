@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "mathjs": "^5.1.0",
     "moment": "^2.22.2"
   },
   "devDependencies": {
