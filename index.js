@@ -18,15 +18,4 @@ console.log(`This is a pretty little template string.`);
 console.log(`In ES5 this is
  not legal.`);
 
-// Proxying a normal object
-var target = {};
-var handler = {
-  get: function(receiver, name) {
-    return `Hello, ${name}!`;
-  }
-};
-
-var p = new Proxy(target, handler);
-p.world === "Hello, world!";
-
-console.log(p.world);
+ 
